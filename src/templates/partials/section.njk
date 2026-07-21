@@ -1,0 +1,70 @@
+{% macro renderListItem(item) %}
+  <li>
+    {% if item is string %}
+      {{ item }}
+    {% elif item.link and item.link2 %}
+      {{ item.text }}<a href="{{ item.link.url }}" target="_blank" rel="noopener noreferrer">{{ item.link.label }}</a>{{ item.textAfter }}<a href="{{ item.link2.url }}" target="_blank" rel="noopener noreferrer">{{ item.link2.label }}</a>
+    {% elif item.link %}
+      {{ item.text }}<a href="{{ item.link.url }}" target="_blank" rel="noopener noreferrer">{{ item.link.label }}</a>{% if item.textAfter %}{{ item.textAfter }}{% endif %}
+    {% endif %}
+  </li>
+{% endmacro %}
+
+{% macro renderSection(section) %}
+  <section class="doc-section">
+    <h2 class="section-heading">
+      <span class="section-emoji">{{ section.emoji }}</span>
+      {{ section.heading }}
+    </h2>
+
+    {% if section.intro %}
+      <p class="section-intro">{{ section.intro }}</p>
+    {% endif %}
+
+    {% if section.type == "list" %}
+      <ul class="doc-list">
+        {% for item in section.items %}
+          {{ renderListItem(item) }}
+        {% endfor %}
+      </ul>
+      {% if section.note %}
+        <p class="section-note">{{ section.note }}</p>
+      {% endif %}
+    {% endif %}
+
+    {% if section.type == "mixed" %}
+      <ul class="doc-list">
+        {% for item in section.items %}
+          {{ renderListItem(item) }}
+        {% endfor %}
+      </ul>
+      {% if section.subitems %}
+        <ul class="doc-sublist">
+          {% for sub in section.subitems %}
+            <li>{{ sub }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if section.footer %}
+        <ul class="doc-list">
+          {% for item in section.footer %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
+
+    {% if section.type == "groups" %}
+      {% for group in section.groups %}
+        <div class="deliverable-group">
+          <h3 class="group-title">{{ group.title }}</h3>
+          <ul class="doc-list">
+            {% for item in group.items %}
+              {{ renderListItem(item) }}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </section>
+{% endmacro %}

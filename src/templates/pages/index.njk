@@ -1,0 +1,28 @@
+{% extends "layouts/base.njk" %}
+{% import "partials/section.njk" as section %}
+
+{% block content %}
+  <article class="document">
+    <header class="doc-header">
+      <div class="doc-icon">📄</div>
+      <h1 class="doc-title">{{ title }}</h1>
+      <p class="doc-subtitle">{{ subtitle }}</p>
+    </header>
+
+    {% for page in pages %}
+      <div class="doc-page" data-page="{{ page.number }}">
+        {% for sec in page.sections %}
+          {{ section.renderSection(sec) }}
+        {% endfor %}
+
+        <footer class="page-footer">
+          <span>-- {{ page.number }} of {{ page.total }} --</span>
+        </footer>
+      </div>
+
+      {% if not loop.last %}
+        <div class="page-divider" aria-hidden="true"></div>
+      {% endif %}
+    {% endfor %}
+  </article>
+{% endblock %}

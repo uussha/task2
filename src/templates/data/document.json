@@ -1,0 +1,179 @@
+{
+  "title": "Internship Task – Bootstrap 5 UI",
+  "subtitle": "Exploration & Page Design",
+  "pages": [
+    {
+      "number": 1,
+      "total": 3,
+      "sections": [
+        {
+          "emoji": "🎯",
+          "heading": "Objective",
+          "type": "list",
+          "intro": "The goal of this task is to:",
+          "items": [
+            "Explore Bootstrap 5's official documentation and Bootstrap Examples.",
+            "Understand their structure & usage.",
+            "Design clean, modern, and responsive HTML pages by remixing those components.",
+            "Focus on visual appeal, component synergy, and layout composition — not just copy-pasting."
+          ]
+        },
+        {
+          "emoji": "📌",
+          "heading": "Scope of Work",
+          "type": "mixed",
+          "intro": "Interns are expected to:",
+          "items": [
+            {
+              "text": "Review the official Bootstrap 5 Examples section → ",
+              "link": { "label": "Examples Link", "url": "https://getbootstrap.com/docs/5.3/examples/" }
+            },
+            "Extract high-quality UI patterns, such as:"
+          ],
+          "subitems": ["Navbars", "Cards", "Carousel / Hero sections", "Forms", "Modals"],
+          "footer": [
+            "Combine selected components into original, visually appealing pages",
+            "Ensure all pages are responsive and polished",
+            "Submit both the source code and a live working URL (GitHub Pages / Netlify)"
+          ]
+        },
+        {
+          "emoji": "🛠️",
+          "heading": "Technologies to Be Used",
+          "type": "list",
+          "items": [
+            "HTML5",
+            "CSS3",
+            {
+              "text": "Bootstrap 5 (latest) → ",
+              "link": { "label": "Bootstrap Website", "url": "https://getbootstrap.com/" }
+            },
+            "Git & GitHub (for version control and hosting)"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "total": 3,
+      "sections": [
+        {
+          "emoji": "📂",
+          "heading": "Task Breakdown / Deliverables",
+          "type": "groups",
+          "groups": [
+            {
+              "title": "Setup",
+              "items": [
+                "Use Bootstrap 5 via CDN",
+                "Create a file structure: index.html, about.html, contact.html"
+              ]
+            },
+            {
+              "title": "Component Collection",
+              "items": [
+                "Explore Bootstrap Example Pages",
+                "Identify attractive & reusable UI components",
+                "Collect: navbars, cards, sidebars, hero layouts, etc."
+              ]
+            },
+            {
+              "title": "Page Design & Composition",
+              "items": [
+                "Build at least 3 full pages:",
+                "Home Page → Navbar, Hero, Feature section, Footer",
+                "ℹ️ About/Services Page",
+                "Contact Page → with a working form"
+              ]
+            },
+            {
+              "title": "Styling & Final Touches",
+              "items": [
+                "Maintain consistent spacing, colors, and layout",
+                "Ensure responsiveness (desktop, tablet, mobile)",
+                "Use Bootstrap utility classes smartly"
+              ]
+            },
+            {
+              "title": "Hosting & Submission",
+              "items": [
+                "Push project to GitHub",
+                {
+                  "text": "Deploy via ",
+                  "link": { "label": "GitHub Pages Guide", "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site" },
+                  "textAfter": " or ",
+                  "link2": { "label": "Netlify Deploy Guide", "url": "https://docs.netlify.com/get-started/" }
+                },
+                "Submit both: GitHub Repo URL & Live Deployed Link"
+              ]
+            }
+          ]
+        },
+        {
+          "emoji": "✍️",
+          "heading": "Project Reflection (Mandatory)",
+          "type": "list",
+          "intro": "Along with the project submission, interns must provide a short written report that explains:",
+          "items": [
+            "How they achieved the project step by step",
+            "Whether they used AI tools (like ChatGPT), Bootstrap docs, or copied snippets",
+            "What challenges they faced and how they solved them",
+            "A clear story of their learning journey and completion process",
+            "The total time taken for completion (in hours/days), specified neatly"
+          ],
+          "note": "Transparency is important. It's okay to use external help or tools, but interns must clearly state it."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "total": 3,
+      "sections": [
+        {
+          "emoji": "🎯",
+          "heading": "Expected Outcome",
+          "type": "list",
+          "intro": "By completing this task, the intern will:",
+          "items": [
+            "Gain hands-on practice with Bootstrap 5",
+            "Learn how to remix components creatively",
+            "Improve UI/UX sense & page composition skills",
+            "Deliver clean, responsive, attractive web pages",
+            "Learn the importance of documenting their process honestly"
+          ]
+        },
+        {
+          "emoji": "📖",
+          "heading": "Guidelines",
+          "type": "list",
+          "items": [
+            "Use only Bootstrap 5 as the main framework",
+            "Interns may improvise and add custom HTML/CSS content if Bootstrap does not provide a specific component — they are free to imagine and build those themselves",
+            "Do not copy-paste full example pages → extract & remix",
+            "Focus on clarity, polish, and modern design",
+            "Keep code clean & well-indented",
+            "Ask for feedback whenever stuck"
+          ]
+        },
+        {
+          "emoji": "📤",
+          "heading": "Submission Format",
+          "type": "list",
+          "items": [
+            {
+              "text": "GitHub Repository → ",
+              "link": { "label": "github.com/yourusername/project-name", "url": "https://github.com/" }
+            },
+            {
+              "text": "Live Preview → ",
+              "link": { "label": "yourusername.github.io/project-name", "url": "https://pages.github.com/" },
+              "textAfter": " or ",
+              "link2": { "label": "yourproject.netlify.app", "url": "https://www.netlify.com/" }
+            },
+            "Project Reflection Report → Markdown (README.md) or PDF, included in the repo"
+          ]
+        }
+      ]
+    }
+  ]
+}

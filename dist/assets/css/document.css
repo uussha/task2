@@ -1,0 +1,240 @@
+/* Recreated Internship Task Document — PDF-style layout */
+
+:root {
+  --doc-bg: #ffffff;
+  --doc-text: #1a1a1a;
+  --doc-muted: #555555;
+  --doc-border: #e0e0e0;
+  --doc-accent: #2563eb;
+  --doc-accent-hover: #1d4ed8;
+  --doc-page-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --doc-max-width: 780px;
+  --font-doc: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: var(--font-doc);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--doc-text);
+  background: #f0f2f5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.document-wrapper {
+  max-width: var(--doc-max-width);
+  margin: 0 auto;
+}
+
+.document {
+  background: var(--doc-bg);
+  border-radius: 4px;
+  box-shadow: var(--doc-page-shadow);
+  overflow: hidden;
+}
+
+/* Header */
+.doc-header {
+  padding: 2.5rem 2.5rem 1.5rem;
+  border-bottom: 2px solid var(--doc-border);
+  text-align: center;
+}
+
+.doc-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.doc-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--doc-text);
+}
+
+.doc-subtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--doc-muted);
+  font-weight: 500;
+}
+
+/* Page sections */
+.doc-page {
+  padding: 2rem 2.5rem 1.5rem;
+}
+
+.doc-section {
+  margin-bottom: 1.75rem;
+}
+
+.doc-section:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--doc-text);
+}
+
+.section-emoji {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.section-intro {
+  margin: 0 0 0.5rem;
+  color: var(--doc-text);
+}
+
+.section-note {
+  margin: 0.75rem 0 0;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border-left: 3px solid var(--doc-accent);
+  border-radius: 0 4px 4px 0;
+  font-size: 0.9rem;
+  color: var(--doc-muted);
+}
+
+/* Lists */
+.doc-list,
+.doc-sublist {
+  margin: 0.25rem 0 0;
+  padding-left: 1.5rem;
+}
+
+.doc-list li,
+.doc-sublist li {
+  margin-bottom: 0.35rem;
+}
+
+.doc-sublist {
+  margin: 0.25rem 0 0.5rem 1rem;
+  list-style-type: circle;
+}
+
+/* Deliverable groups */
+.deliverable-group {
+  margin-bottom: 1.25rem;
+}
+
+.group-title {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--doc-text);
+  text-transform: capitalize;
+}
+
+/* Links */
+a {
+  color: var(--doc-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--doc-accent-hover);
+}
+
+/* Page footer (PDF page numbers) */
+.page-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  border-top: 1px dashed var(--doc-border);
+}
+
+.page-footer span {
+  font-size: 0.85rem;
+  color: var(--doc-muted);
+  letter-spacing: 0.05em;
+}
+
+.page-divider {
+  height: 1rem;
+  background: #f0f2f5;
+  border-top: 1px solid var(--doc-border);
+  border-bottom: 1px solid var(--doc-border);
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+
+  .document {
+    box-shadow: none;
+  }
+
+  .doc-page {
+    page-break-after: always;
+  }
+
+  .page-divider {
+    display: none;
+  }
+
+  a {
+    color: var(--doc-accent);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  .doc-header,
+  .doc-page {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .doc-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* Build badge (added via JS) */
+.build-badge {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #1e293b;
+  color: #94a3b8;
+  font-size: 0.7rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.build-badge strong {
+  color: #e2e8f0;
+}
+
+@media print {
+  .build-badge {
+    display: none;
+  }
+}

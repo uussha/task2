@@ -1,0 +1,1 @@
+(function(){const t=document.createElement("div");t.className="build-badge",t.innerHTML="Built with <strong>Nunjucks</strong> + <strong>Vite</strong>",document.body.appendChild(t),document.querySelectorAll('a[href^="http"]').forEach(function(e){e.setAttribute("rel","noopener noreferrer"),e.hasAttribute("target")||e.setAttribute("target","_blank")})})();
